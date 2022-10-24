@@ -29,6 +29,8 @@ session_start();
 
         <div class="d-flex justify-content-center align-items-center">
 
+            <a href="index.php"><button>Back</button></a>
+
             <form action="content.php" class="mt-5 w-75 h-100 row" method="POST">
 
                 <div class=" mt-3 col-8">
