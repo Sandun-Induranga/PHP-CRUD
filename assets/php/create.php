@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -13,7 +13,7 @@
 <body class="bg-light w-100 h-100 row justify-content-center">
 
     <!-- Form -->
-    <section class="col-12">
+    <section>
 
         <div class="d-flex justify-content-center align-items-center">
 
@@ -46,25 +46,6 @@
 
         </div>
 
-    </section>
-
-    <!-- Table -->
-    <section class="col-10">
-        <div class="row d-flex justify-content-center align-items-center overflow-auto mb-5 shadow-lg">
-            <table class="table table-hover" id="tblCustomer">
-                <thead class="bg-primary text-light table-bordered sticky-top">
-                    <tr>
-                        <th scope="col">Customer ID</th>
-                        <th scope="col">Customer Name</th>
-                        <th scope="col">Customer Address</th>
-                        <th scope="col">Customer Salary</th>
-                    </tr>
-                </thead>
-                <tbody>
-
-                </tbody>
-            </table>
-        </div>
     </section>
 
     <!-- JS For Bootstrap -->
