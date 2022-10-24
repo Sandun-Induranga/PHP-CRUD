@@ -1,4 +1,10 @@
- <!DOCTYPE html>
+<?php
+
+    require 'config.php';
+
+?>
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -27,6 +33,32 @@
                     </tr>
                 </thead>
                 <tbody>
+
+                <?php
+
+                    $sql = "SELECT * FROM Customer";
+                    $excecute = mysqli_query($con, $sql);
+
+                    if(mysqli_num_rows($excecute)>0){
+
+                        foreach($excecute as $customer){
+                            ?>
+
+                            <tr>
+                                <td> <?= $customer['cusId'] ?> </td>
+                                <td> <?= $customer['cusName'] ?> </td>
+                                <td> <?= $customer['cusAddress'] ?> </td>
+                                <td> <?= $customer['cusSalary'] ?> </td>
+                            </tr>
+
+                            <?php
+                        }
+
+                    }else{
+                        echo "<h4>This Table is Empty</h4>";
+                    }
+
+                ?>
 
                 </tbody>
             </table>
