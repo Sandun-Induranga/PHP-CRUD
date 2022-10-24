@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require 'config.php';
 
 if(isset($_POST['save'])){
@@ -14,6 +14,13 @@ if(isset($_POST['save'])){
     $excecute = mysqli_query($con, $sql);
 
     if($excecute){
+        $_SESSION['message'] = "Customer Added Successfully..!";
+
+        header("Location: create.php");
+        exit(0);
+    }else{
+        $_SESSION['message'] = "Something Went Wrong..!";
+
         header("Location: create.php");
         exit(0);
     }
