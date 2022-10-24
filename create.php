@@ -17,7 +17,7 @@
 
         <div class="d-flex justify-content-center align-items-center">
 
-            <form action="code.php" class="mt-5 w-75 h-100 row" method="POST">
+            <form action="content.php" class="mt-5 w-75 h-100 row" method="POST">
 
                 <div class=" mt-3 col-8">
                     <label for="txtCusId" class="form-label">Customer ID</label>
@@ -37,7 +37,7 @@
                 </div>
 
                 <div class="mt-5">
-                    <button class="col-2 btn btn-success">Save</button>
+                    <button class="col-2 btn btn-success" name="save">Save</button>
                 </div>
 
             </form>
