@@ -21,6 +21,12 @@ session_start();
     <!-- Form -->
     <section>
 
+        <?php
+
+            include('alert.php');
+
+        ?>
+
         <div class="d-flex justify-content-center align-items-center">
 
             <form action="content.php" class="mt-5 w-75 h-100 row" method="POST">
