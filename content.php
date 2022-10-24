@@ -9,6 +9,15 @@ if(isset($_POST['save'])){
     $address = mysqli_real_escape_string($con, $_POST['address']);
     $salary = mysqli_real_escape_string($con, $_POST['salary']);
 
+    $sql = "INSERT INTO Customer VALUES ('$cusId', '$cusName', '$address', '$salary')";
+
+    $excecute = mysqli_query($con, $sql);
+
+    if($excecute){
+        header("Location: create.php");
+        exit(0);
+    }
+
 }
 
 ?>
