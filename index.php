@@ -30,6 +30,7 @@
                         <th scope="col">Customer Name</th>
                         <th scope="col">Customer Address</th>
                         <th scope="col">Customer Salary</th>
+                        <th scope="col">Options</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -49,6 +50,10 @@
                                 <td> <?= $customer['cusName'] ?> </td>
                                 <td> <?= $customer['cusAddress'] ?> </td>
                                 <td> <?= $customer['cusSalary'] ?> </td>
+                                <td>
+                                    <a class="btn btn-warning btn-sm" href="">Edit</a>
+                                    <a class="btn btn-danger btn-sm" href="">Delete</a>
+                                </td>
                             </tr>
 
                             <?php
