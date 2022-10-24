@@ -17,29 +17,27 @@
 
         <div class="d-flex justify-content-center align-items-center">
 
-            <form class="w-75 row" method="post">
+            <form action="code.php" class="mt-5 w-75 h-100 row" method="POST">
 
-                <div class="mb-3 mt-5 col-3">
+                <div class=" mt-3 col-8">
                     <label for="txtCusId" class="form-label">Customer ID</label>
                     <input type="text" class="form-control" name="cusId">
                 </div>
-                <div class="mb-3 mt-5 col-3">
+                <div class="mt-3 col-8">
                     <label for="txtCusName" class="form-labename">Customer Name</label>
                     <input type="text" class="form-control" name="cusName">
                 </div>
-                <div class="mb-3 mt-5 col-3">
+                <div class="mt-3 col-8">
                     <label for="txtAddress" class="form-labename">Address</label>
                     <input type="text" class="form-control" name="address">
                 </div>
-                <div class="mb-3 mt-5 col-3">
+                <div class="mt-3 col-8">
                     <label for="txtSalary" class="form-label">Salary</label>
                     <input type="text" class="form-control" name="salary">
                 </div>
 
-                <div class="row mb-5 mt-2 justify-content-end">
-                    <button class="me-2 col-1 btn btn-success">Save</button>
-                    <button class="me-2 col-1 btn btn-warning">Update</button>
-                    <button class="me-2 col-1 btn btn-danger">Delete</button>
+                <div class="mt-5">
+                    <button class="col-2 btn btn-success">Save</button>
                 </div>
 
             </form>
