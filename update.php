@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+require 'config.php';
 
 ?>
 
@@ -25,7 +26,7 @@ session_start();
 
             if(isset($_GET['cusId'])){
 
-                $cusId = $_GET['cusId'];
+                $cusId = mysqli_real_escape_string($con, $_GET['cusId']);
                 $sql = "SELECT * FROM Customer WHERE cusId = '$cusId'";
 
             }
