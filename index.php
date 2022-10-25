@@ -51,7 +51,7 @@
                                 <td> <?= $customer['cusAddress'] ?> </td>
                                 <td> <?= $customer['cusSalary'] ?> </td>
                                 <td>
-                                    <a class="btn btn-warning btn-sm" href="">Edit</a>
+                                    <a class="btn btn-warning btn-sm" href="update.php?cusId=<?= $customer['cusId'] ?>">Edit</a>
                                     <a class="btn btn-danger btn-sm" href="">Delete</a>
                                 </td>
                             </tr>

@@ -9,7 +9,7 @@ session_start();
 
 <head>
     <meta charset="UTF-8">
-    <title>Add Customers</title>
+    <title>Update Customers</title>
 
     <!-- CSS For Bootstrap -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -51,7 +51,7 @@ session_start();
                 </div>
 
                 <div class="mt-5">
-                    <button class="col-2 btn btn-success" name="save">Save</button>
+                    <button class="col-2 btn btn-success" name="update">Update</button>
                 </div>
 
             </form>
