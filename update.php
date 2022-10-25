@@ -20,11 +20,14 @@ require 'config.php';
 <body class="bg-light w-100 h-100 row justify-content-center align-items-center">
 
     <!-- Form -->
-    <section>
+    <section class="border border-2 border-primary mt-5 w-75">
 
         <div class="d-flex flex-column justify-content-center align-items-center">
 
-            <a class="mt-5" href="index.php"><button class="btn btn-danger">Back</button></a>
+            <div class="mt-5">
+                <a class="d-inline me-5" href="index.php"><button class="btn btn-danger">Back</button></a>
+                <h1 class="d-inline text-primary">Update Customers</h1>
+            </div>
 
             <?php
 
@@ -37,36 +40,36 @@ require 'config.php';
                 if (mysqli_num_rows($excecute) > 0) {
 
                     $customer = mysqli_fetch_array($excecute);
-                    ?>
-                        <form action="content.php" class="mt-5 w-75 h-100 row" method="POST">
+            ?>
+                    <form action="content.php" class="mt-5 w-75 h-100 row justify-content-center align-items-center" method="POST">
 
-                            <div class=" mt-3 col-8">
-                                <label for="txtCusId" class="form-label">Customer ID</label>
-                                <input type="text" class="form-control" name="cusId" value="<?= $customer['cusId']; ?>">
-                            </div>
+                        <div class=" mt-3 col-8">
+                            <label for="txtCusId" class="form-label">Customer ID</label>
+                            <input type="text" class="form-control" name="cusId" value="<?= $customer['cusId']; ?>">
+                        </div>
 
-                            <div class="mt-3 col-8">
-                                <label for="txtCusName" class="form-labename">Customer Name</label>
-                                <input type="text" class="form-control" name="cusName" value="<?= $customer['cusName']; ?>">
-                            </div>
+                        <div class="mt-3 col-8">
+                            <label for="txtCusName" class="form-labename">Customer Name</label>
+                            <input type="text" class="form-control" name="cusName" value="<?= $customer['cusName']; ?>">
+                        </div>
 
-                            <div class="mt-3 col-8">
-                                <label for="txtAddress" class="form-labename">Address</label>
-                                <input type="text" class="form-control" name="address" value="<?= $customer['cusAddress']; ?>">
-                            </div>
+                        <div class="mt-3 col-8">
+                            <label for="txtAddress" class="form-labename">Address</label>
+                            <input type="text" class="form-control" name="address" value="<?= $customer['cusAddress']; ?>">
+                        </div>
 
-                            <div class="mt-3 col-8">
-                                <label for="txtSalary" class="form-label">Salary</label>
-                                <input type="text" class="form-control" name="salary" value="<?= $customer['cusSalary']; ?>">
-                            </div>
+                        <div class="mt-3 col-8">
+                            <label for="txtSalary" class="form-label">Salary</label>
+                            <input type="text" class="form-control" name="salary" value="<?= $customer['cusSalary']; ?>">
+                        </div>
 
-                            <div class="mt-5">
-                                <button class="col-2 btn btn-success" name="update">Update</button>
-                            </div>
+                        <div class="mt-5 mb-5 col-5">
+                            <button class="btn btn-success" name="update">Update Customer</button>
+                        </div>
 
-                        </form>
+                    </form>
 
-                    <?php
+            <?php
 
                 } else {
                     echo "<h4>Invalid Customer Id</h4>";
