@@ -17,10 +17,10 @@ require 'config.php';
 
 </head>
 
-<body class="bg-light w-100 h-100 row justify-content-center align-items-center">
+<body class="bg-dark w-100 h-100 row justify-content-center align-items-center">
 
     <!-- Form -->
-    <section class="border border-2 border-primary mt-5 w-75">
+    <section class="bg-light rounded-5 shadow-lg border border-2 border-primary mt-5 w-75">
 
         <div class="d-flex flex-column justify-content-center align-items-center">
 

@@ -16,10 +16,10 @@ session_start();
 
 </head>
 
-<body class="bg-light w-100 h-100 d-flex justify-content-center align-items-center">
+<body class="bg-dark w-100 h-100 d-flex justify-content-center align-items-center">
 
     <!-- Form -->
-    <section class="border border-2 border-primary mt-5 w-75">
+    <section class="bg-light border border-2 rounded-5 shadow-lg border-primary mt-5 w-75">
 
         <?php
 
