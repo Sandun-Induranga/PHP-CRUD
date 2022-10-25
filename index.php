@@ -52,7 +52,9 @@
                                 <td> <?= $customer['cusSalary'] ?> </td>
                                 <td>
                                     <a class="btn btn-warning btn-sm" href="update.php?cusId=<?= $customer['cusId'] ?>">Edit</a>
-                                    <a class="btn btn-danger btn-sm" href="delete.php?cusId=<?= $customer['cusId'] ?>">Delete</a>
+                                    <form action="content.php" method="POST" class="d-inline">
+                                        <button type="submit" name="delete" value="<?= $customer['cusId']; ?>" class="btn btn-danger btn-sm">Delete</button>
+                                    </form>
                                 </td>
                             </tr>
 
