@@ -58,4 +58,27 @@ if(isset($_POST['update'])){
 
 }
 
+
+// Delete
+
+if(isset($_POST['delete'])){
+
+    $cusId = mysqli_real_escape_string($con, $_POST['delete']);
+    $sql = "DELETE FROM Customer WHERE cusId = '$cusId'";
+
+    $excecute = mysqli_query($con, $sql);
+
+    if($excecute){
+        $_SESSION['message'] = "Customer Deleted Successfully..!";
+
+        header("Location: index.php");
+        exit(0);
+    }else{
+        $_SESSION['message'] = "Something Went Wrong..!";
+
+        header("Location: index.php");
+        exit(0);
+    }
+}
+
 ?>
