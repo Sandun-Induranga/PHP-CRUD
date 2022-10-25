@@ -28,13 +28,13 @@ require 'config.php';
 
             <?php
 
-            if(isset($_GET['cusId'])){
+            if (isset($_GET['cusId'])) {
 
                 $cusId = mysqli_real_escape_string($con, $_GET['cusId']);
                 $sql = "SELECT * FROM Customer WHERE cusId = '$cusId'";
                 $excecute = mysqli_query($con, $sql);
 
-                if(mysqli_num_rows($excecute)>0){
+                if (mysqli_num_rows($excecute) > 0) {
 
                     $customer = mysqli_fetch_array($excecute);
                     ?>
@@ -42,22 +42,22 @@ require 'config.php';
 
                             <div class=" mt-3 col-8">
                                 <label for="txtCusId" class="form-label">Customer ID</label>
-                                <input type="text" class="form-control" name="cusId">
+                                <input type="text" class="form-control" name="cusId" value="<?= $customer['cusId']; ?>">
                             </div>
 
                             <div class="mt-3 col-8">
                                 <label for="txtCusName" class="form-labename">Customer Name</label>
-                                <input type="text" class="form-control" name="cusName">
+                                <input type="text" class="form-control" name="cusName" value="<?= $customer['cusName']; ?>">
                             </div>
 
                             <div class="mt-3 col-8">
                                 <label for="txtAddress" class="form-labename">Address</label>
-                                <input type="text" class="form-control" name="address">
+                                <input type="text" class="form-control" name="address" value="<?= $customer['cusAddress']; ?>">
                             </div>
 
                             <div class="mt-3 col-8">
                                 <label for="txtSalary" class="form-label">Salary</label>
-                                <input type="text" class="form-control" name="salary">
+                                <input type="text" class="form-control" name="salary" value="<?= $customer['cusSalary']; ?>">
                             </div>
 
                             <div class="mt-5">
@@ -68,13 +68,12 @@ require 'config.php';
 
                     <?php
 
-                }else{
-                    echo "<h4>Invalid Customer Id</h4>"
+                } else {
+                    echo "<h4>Invalid Customer Id</h4>";
                 }
-
             }
 
-        ?>
+            ?>
 
         </div>
 
