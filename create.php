@@ -9,17 +9,17 @@ session_start();
 
 <head>
     <meta charset="UTF-8">
-    <title>Add Customers</title>
+    <title>Manage Customers</title>
 
     <!-- CSS For Bootstrap -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
 </head>
 
-<body class="bg-light w-100 h-100 row justify-content-center align-items-center">
+<body class="bg-light w-100 h-100 d-flex justify-content-center align-items-center">
 
     <!-- Form -->
-    <section>
+    <section class="border border-2 border-primary mt-5 w-75">
 
         <?php
 
@@ -29,9 +29,12 @@ session_start();
 
         <div class="d-flex flex-column justify-content-center align-items-center">
 
-            <a class="mt-5" href="index.php"><button class="btn btn-danger">Back</button></a>
+            <div class="mt-5">
+                <a class="d-inline me-5" href="index.php"><button class="btn btn-danger">Back</button></a>
+                <h1 class="d-inline text-primary">Add Customers</h1>
+            </div>
 
-            <form action="content.php" class="mt-5 w-75 h-100 row" method="POST">
+            <form action="content.php" class="mt-5 w-75 h-100 row justify-content-center align-items-center" method="POST">
 
                 <div class=" mt-3 col-8">
                     <label for="txtCusId" class="form-label">Customer ID</label>
@@ -50,8 +53,8 @@ session_start();
                     <input type="text" class="form-control" name="salary">
                 </div>
 
-                <div class="mt-5">
-                    <button class="col-2 btn btn-success" name="save">Save</button>
+                <div class="mt-5 mb-5 col-5">
+                    <button class="btn btn-success" name="save">Save Customer</button>
                 </div>
 
             </form>
