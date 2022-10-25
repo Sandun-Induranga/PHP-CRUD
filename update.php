@@ -23,7 +23,12 @@ session_start();
 
         <?php
 
-            include('alert.php');
+            if(isset($_GET['cusId'])){
+
+                $cusId = $_GET['cusId'];
+                $sql = "SELECT * FROM Customer WHERE cusId = '$cusId'";
+
+            }
 
         ?>
 
